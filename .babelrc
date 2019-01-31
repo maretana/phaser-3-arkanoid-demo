@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+  "plugins": [
+    ["module-resolver",
+      {
+        "root": ["./src"]
+      }
+    ]
+  ]
+}
