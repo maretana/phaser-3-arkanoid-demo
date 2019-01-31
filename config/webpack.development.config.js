@@ -49,7 +49,8 @@ module.exports = {
       // browse to http://localhost:3000/ during development,
       host: 'localhost',
       port: 3000,
-      server: { baseDir: [deployFolder] }
+      server: { baseDir: [deployFolder] },
+      open: false
     })
   ]
 }
