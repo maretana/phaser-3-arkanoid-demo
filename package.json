@@ -1,0 +1,22 @@
+{
+  "name": "phaser-3-arkanoid-demo",
+  "version": "1.0.0",
+  "description": "A demo project to practice with Phaser 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maretana/phaser-3-arkanoid-demo.git"
+  },
+  "keywords": [
+    "phaser3"
+  ],
+  "author": "Mario Retana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maretana/phaser-3-arkanoid-demo/issues"
+  },
+  "homepage": "https://github.com/maretana/phaser-3-arkanoid-demo#readme"
+}
