@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 
 const deployFolder = devPath
@@ -28,7 +29,15 @@ module.exports = {
         loader: 'babel-loader',
         include: src
       },
-      { test: [/\.vert$/, /\.frag$/], use: 'raw-loader' }
+      { test: [/\.vert$/, /\.frag$/], use: 'raw-loader' },
+      {
+        test: /\.(s*)css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        }),
+        include: src
+      }
     ]
   },
   plugins: [
@@ -36,6 +45,7 @@ module.exports = {
       'CANVAS_RENDERER': JSON.stringify(true),
       'WEBGL_RENDERER': JSON.stringify(true)
     }),
+    new ExtractTextPlugin({ filename: 'app.bundle.css' }),
     new CleanWebpackPlugin([deployFolder], {
       root: baseDir
     }),
