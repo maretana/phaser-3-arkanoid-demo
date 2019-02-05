@@ -6,7 +6,7 @@ export default class MenuScene extends Phaser.Scene {
   }
   preload () {}
   create () {
-    this.add.text(16, 16, 'I have been created!', {})
+    this.add.bitmapText(16, 16, 'unibody', 'This is the menu scene', 16)
   }
   update () {}
 }
