@@ -5,7 +5,7 @@ export default class LoadScene extends Phaser.Scene {
     super({ key: 'LOADING_SCENE' })
   }
   preload () {
-    this.load.bitmapFont('unibody', 'assets/font/font.png', 'assets/font/font.fnt')
+    this.load.bitmapFont('unibody', 'assets/font/unibody.png', 'assets/font/unibody.fnt')
   }
   create () {
     this.scene.start('MENU_SCENE')
