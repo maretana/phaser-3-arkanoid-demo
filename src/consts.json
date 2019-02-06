@@ -1,0 +1,9 @@
+{
+  "SCENE": {
+    "LOADING": "LOADING_SCENE",
+    "MENU": "MENU_SCENE"
+  },
+  "FONT": {
+    "DEFAULT": "unibody"
+  }
+}

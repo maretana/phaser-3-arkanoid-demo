@@ -1,14 +1,17 @@
 import Phaser from 'phaser'
+import CONSTS from 'consts.json'
+
+console.log('consts:', CONSTS)
 
 export default class LoadScene extends Phaser.Scene {
   constructor () {
-    super({ key: 'LOADING_SCENE' })
+    super({ key: CONSTS.SCENE.LOADING })
   }
   preload () {
-    this.load.bitmapFont('unibody', 'assets/font/unibody.png', 'assets/font/unibody.fnt')
+    this.load.bitmapFont(CONSTS.FONT.DEFAULT, 'assets/font/unibody.png', 'assets/font/unibody.fnt')
   }
   create () {
-    this.scene.start('MENU_SCENE')
+    this.scene.start(CONSTS.SCENE.MENU)
   }
   update () {}
 }
