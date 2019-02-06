@@ -55,7 +55,6 @@ export default class MenuScene extends Phaser.Scene {
   preload () {}
 
   create () {
-    window.debugThis = this
     this.addMenuText()
     this.addCursor()
     this.onMenuSelectionChange(this.selectedMenuOption)

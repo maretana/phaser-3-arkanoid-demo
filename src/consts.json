@@ -1,7 +1,8 @@
 {
   "SCENE": {
     "LOADING": "LOADING_SCENE",
-    "MENU": "MENU_SCENE"
+    "MENU": "MENU_SCENE",
+    "LEVEL": "LEVEL_SCENE"
   },
   "FONT": {
     "DEFAULT": "unibody"
