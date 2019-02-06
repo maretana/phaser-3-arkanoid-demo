@@ -5,8 +5,9 @@ body {
 }
 
 body {
+  height: 100vh;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  align-items: center;
   background-color: #ccc;
 }
