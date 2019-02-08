@@ -1,8 +1,6 @@
 import Phaser from 'phaser'
 import CONSTS from 'consts.json'
 
-console.log('consts:', CONSTS)
-
 export default class LoadScene extends Phaser.Scene {
   constructor () {
     super({ key: CONSTS.SCENE.LOADING })
@@ -12,6 +10,7 @@ export default class LoadScene extends Phaser.Scene {
   }
   create () {
     this.scene.start(CONSTS.SCENE.MENU)
+    this.scene.remove()
   }
   update () {}
 }
