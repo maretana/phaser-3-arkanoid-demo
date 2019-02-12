@@ -11,7 +11,8 @@
   },
   "keywords": [
     "phaser3",
-    "arkanoid"
+    "arkanoid",
+    "breakout"
   ],
   "author": "Mario Retana",
   "license": "MIT",
@@ -21,7 +22,7 @@
   "homepage": "https://github.com/maretana/phaser-3-arkanoid-demo#readme",
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
-    "phaser": "^3.15.1"
+    "phaser": "^3.16.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
