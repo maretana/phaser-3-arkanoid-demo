@@ -1,7 +1,7 @@
 {
 	"frames": [
 		{
-			"filename": "ball.png",
+			"filename": "ball",
 			"frame": {
 				"x": 1,
 				"y": 1,
@@ -22,7 +22,7 @@
 			}
 		},
 		{
-			"filename": "border.png",
+			"filename": "border",
 			"frame": {
 				"x": 1,
 				"y": 46,
@@ -43,7 +43,7 @@
 			}
 		},
 		{
-			"filename": "bricks.png",
+			"filename": "bricks",
 			"frame": {
 				"x": 46,
 				"y": 1,
@@ -64,7 +64,7 @@
 			}
 		},
 		{
-			"filename": "paddle.png",
+			"filename": "paddle",
 			"frame": {
 				"x": 228,
 				"y": 1,
