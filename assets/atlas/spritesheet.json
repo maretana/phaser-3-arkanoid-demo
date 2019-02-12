@@ -1,0 +1,99 @@
+{
+	"frames": [
+		{
+			"filename": "ball.png",
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 43,
+				"h": 43
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 43,
+				"h": 43
+			},
+			"sourceSize": {
+				"w": 43,
+				"h": 43
+			}
+		},
+		{
+			"filename": "border.png",
+			"frame": {
+				"x": 1,
+				"y": 46,
+				"w": 750,
+				"h": 25
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 750,
+				"h": 25
+			},
+			"sourceSize": {
+				"w": 750,
+				"h": 25
+			}
+		},
+		{
+			"filename": "bricks.png",
+			"frame": {
+				"x": 46,
+				"y": 1,
+				"w": 180,
+				"h": 40
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 180,
+				"h": 40
+			},
+			"sourceSize": {
+				"w": 180,
+				"h": 40
+			}
+		},
+		{
+			"filename": "paddle.png",
+			"frame": {
+				"x": 228,
+				"y": 1,
+				"w": 128,
+				"h": 25
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 128,
+				"h": 25
+			},
+			"sourceSize": {
+				"w": 128,
+				"h": 25
+			}
+		}
+	],
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 752,
+			"h": 72
+		},
+		"scale": "1"
+	}
+}
