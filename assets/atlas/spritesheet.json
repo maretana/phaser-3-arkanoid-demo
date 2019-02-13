@@ -22,10 +22,52 @@
 			}
 		},
 		{
-			"filename": "border",
+			"filename": "border_left",
 			"frame": {
-				"x": 1,
-				"y": 46,
+				"x": 46,
+				"y": 1,
+				"w": 25,
+				"h": 750
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 25,
+				"h": 750
+			},
+			"sourceSize": {
+				"w": 25,
+				"h": 750
+			}
+		},
+		{
+			"filename": "border_right",
+			"frame": {
+				"x": 73,
+				"y": 1,
+				"w": 25,
+				"h": 750
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 25,
+				"h": 750
+			},
+			"sourceSize": {
+				"w": 25,
+				"h": 750
+			}
+		},
+		{
+			"filename": "border_top",
+			"frame": {
+				"x": 100,
+				"y": 1,
 				"w": 750,
 				"h": 25
 			},
@@ -45,7 +87,7 @@
 		{
 			"filename": "bricks",
 			"frame": {
-				"x": 46,
+				"x": 852,
 				"y": 1,
 				"w": 180,
 				"h": 40
@@ -66,7 +108,7 @@
 		{
 			"filename": "paddle",
 			"frame": {
-				"x": 228,
+				"x": 1034,
 				"y": 1,
 				"w": 128,
 				"h": 25
@@ -91,8 +133,8 @@
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 752,
-			"h": 72
+			"w": 1163,
+			"h": 752
 		},
 		"scale": "1"
 	}
