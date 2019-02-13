@@ -2,7 +2,7 @@ import Phaser from 'phaser'
 
 export default class Brick extends Phaser.Physics.Arcade.Image {
   constructor (params) {
-    const { scene, x, y, color = 0xff0000, isBreakable } = params
+    const { scene, x, y, color, isBreakable } = params
     super(scene, x, y, 'spritesheet', 'brick')
     scene.add.existing(this)
 

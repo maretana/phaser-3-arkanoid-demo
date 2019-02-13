@@ -8,7 +8,7 @@ import 'styles/styles.css'
 let game = new Phaser.Game({ // eslint-disable-line no-unused-vars
   type: Phaser.AUTO,
   width: 800,
-  height: 400,
+  height: 450,
   scene: [LoadScene, MenuScene, LevelScene],
   physics: {
     default: 'arcade'

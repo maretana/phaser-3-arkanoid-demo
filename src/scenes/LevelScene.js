@@ -1,6 +1,6 @@
 import Phaser from 'phaser'
 import CONSTS from 'consts.json'
-import Brick from 'components/Brick'
+// import Brick from 'components/Brick'
 
 export default class LevelScene extends Phaser.Scene {
   constructor () {
@@ -11,6 +11,7 @@ export default class LevelScene extends Phaser.Scene {
     this.borders = undefined
     this.ball = undefined
     this.bricks = undefined
+    this.paddle = undefined
   }
 
   addBorders () {
@@ -24,7 +25,7 @@ export default class LevelScene extends Phaser.Scene {
     topBorder.setScale(scale, 1).refreshBody()
 
     // LEFT
-    window.left = this.borders.create(0, 0, 'spritesheet', 'border_left')
+    this.borders.create(0, 0, 'spritesheet', 'border_left')
       .setOrigin(0, 0).setScale(1, scale).refreshBody()
 
     // RIGHT
@@ -33,9 +34,15 @@ export default class LevelScene extends Phaser.Scene {
   }
 
   addBall () {
-    this.ball = this.physics.add.sprite(0, 0, 'spritesheet', 'ball')
-      // 400 / game width is arbitrary to calculate the size.
-      .setBounce(1).setScale(400 / this.sys.game.config.width)
+    this.ball = this.physics.add.image(0, 0, 'spritesheet', 'ball')
+      .setBounce(1).setScale(0.5)
+  }
+
+  addPaddle () {
+    const { width, height } = this.sys.game.config
+    const x = width / 2
+    const y = height * 0.85
+    this.paddle = this.physics.add.image(x, y, 'spritesheet', 'paddle')
   }
 
   create () {
@@ -46,8 +53,6 @@ export default class LevelScene extends Phaser.Scene {
     this.addBorders()
     this.addBall()
     this.physics.add.collider(this.ball, this.borders)
-    this.bricks = this.physics.add.staticGroup()
-    window.brick = new Brick({ scene: this, x: 400, y: 300 })
-    this.bricks.add(window.brick)
+    this.addPaddle()
   }
 }
