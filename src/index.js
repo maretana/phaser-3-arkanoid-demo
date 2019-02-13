@@ -3,12 +3,17 @@ import LoadScene from 'scenes/LoadScene'
 import MenuScene from 'scenes/MenuScene'
 import LevelScene from 'scenes/LevelScene'
 
-import 'styles/styles.css'
+import 'styles/styles.scss'
 
 let game = new Phaser.Game({ // eslint-disable-line no-unused-vars
   type: Phaser.AUTO,
-  width: 800,
-  height: 450,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    parent: 'phaserGame',
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: 1200,
+    height: 675
+  },
   scene: [LoadScene, MenuScene, LevelScene],
   physics: {
     default: 'arcade'

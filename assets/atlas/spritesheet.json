@@ -68,7 +68,7 @@
 			"frame": {
 				"x": 100,
 				"y": 1,
-				"w": 750,
+				"w": 1200,
 				"h": 25
 			},
 			"rotated": false,
@@ -76,18 +76,18 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 750,
+				"w": 1200,
 				"h": 25
 			},
 			"sourceSize": {
-				"w": 750,
+				"w": 1200,
 				"h": 25
 			}
 		},
 		{
 			"filename": "brick",
 			"frame": {
-				"x": 852,
+				"x": 1302,
 				"y": 1,
 				"w": 90,
 				"h": 40
@@ -108,7 +108,7 @@
 		{
 			"filename": "brick_damaged",
 			"frame": {
-				"x": 942,
+				"x": 1392,
 				"y": 1,
 				"w": 90,
 				"h": 40
@@ -129,7 +129,7 @@
 		{
 			"filename": "paddle",
 			"frame": {
-				"x": 1034,
+				"x": 1484,
 				"y": 1,
 				"w": 128,
 				"h": 25
@@ -154,7 +154,7 @@
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 1163,
+			"w": 1613,
 			"h": 752
 		},
 		"scale": "1"

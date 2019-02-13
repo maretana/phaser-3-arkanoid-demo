@@ -16,21 +16,18 @@ export default class LevelScene extends Phaser.Scene {
 
   addBorders () {
     this.borders = this.physics.add.staticGroup()
-    let topBorder, scale
     const { width } = this.sys.game.config
 
     // TOP
-    topBorder = this.borders.create(0, 0, 'spritesheet', 'border_top').setOrigin(0, 0)
-    scale = width / topBorder.width
-    topBorder.setScale(scale, 1).refreshBody()
+    this.borders.create(0, 0, 'spritesheet', 'border_top').setOrigin(0, 0)
 
     // LEFT
     this.borders.create(0, 0, 'spritesheet', 'border_left')
-      .setOrigin(0, 0).setScale(1, scale).refreshBody()
+      .setOrigin(0, 0)
 
     // RIGHT
     this.borders.create(width, 0, 'spritesheet', 'border_right')
-      .setOrigin(1, 0).setScale(1, scale).refreshBody()
+      .setOrigin(1, 0)
   }
 
   addBall () {
