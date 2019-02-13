@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
 import CONSTS from 'consts.json'
+import Brick from 'components/Brick'
 
 export default class LevelScene extends Phaser.Scene {
   constructor () {
@@ -9,6 +10,7 @@ export default class LevelScene extends Phaser.Scene {
   init () {
     this.borders = undefined
     this.ball = undefined
+    this.bricks = undefined
   }
 
   addBorders () {
@@ -44,5 +46,8 @@ export default class LevelScene extends Phaser.Scene {
     this.addBorders()
     this.addBall()
     this.physics.add.collider(this.ball, this.borders)
+    this.bricks = this.physics.add.staticGroup()
+    window.brick = new Brick({ scene: this, x: 400, y: 300 })
+    this.bricks.add(window.brick)
   }
 }

@@ -85,11 +85,11 @@
 			}
 		},
 		{
-			"filename": "bricks",
+			"filename": "brick",
 			"frame": {
 				"x": 852,
 				"y": 1,
-				"w": 180,
+				"w": 90,
 				"h": 40
 			},
 			"rotated": false,
@@ -97,11 +97,32 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 180,
+				"w": 90,
 				"h": 40
 			},
 			"sourceSize": {
-				"w": 180,
+				"w": 90,
+				"h": 40
+			}
+		},
+		{
+			"filename": "brick_damaged",
+			"frame": {
+				"x": 942,
+				"y": 1,
+				"w": 90,
+				"h": 40
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 90,
+				"h": 40
+			},
+			"sourceSize": {
+				"w": 90,
 				"h": 40
 			}
 		},
