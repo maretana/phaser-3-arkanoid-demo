@@ -14,20 +14,19 @@ export default class LevelScene extends Phaser.Scene {
     this.borders = this.physics.add.staticGroup()
     let topBorder, scale
     const { width } = this.sys.game.config
-    const radians = Math.PI / 180
 
     // TOP
-    topBorder = this.borders.create(0, 0, 'spritesheet', 'border').setOrigin(0, 0)
+    topBorder = this.borders.create(0, 0, 'spritesheet', 'border_top').setOrigin(0, 0)
     scale = width / topBorder.width
-    topBorder.setScale(scale)
+    topBorder.setScale(scale).refreshBody()
 
     // LEFT
-    this.borders.create(0, 0, 'spritesheet', 'border')
-      .setRotation(270 * radians).setOrigin(1, 0).setScale(scale)
+    window.left = this.borders.create(0, 0, 'spritesheet', 'border_left')
+      .setOrigin(0, 0).setScale(scale).refreshBody()
 
     // RIGHT
-    this.borders.create(width, 0, 'spritesheet', 'border')
-      .setRotation(90 * radians).setOrigin(0, 0).setScale(scale)
+    this.borders.create(width, 0, 'spritesheet', 'border_right')
+      .setOrigin(1, 0).setScale(scale).refreshBody()
   }
 
   create () {
