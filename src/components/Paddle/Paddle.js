@@ -31,7 +31,8 @@ export default class Paddle extends Phaser.Physics.Arcade.Image {
     this.stop()
   }
 
-  onBallCollide (ballBody) {
+  onBallCollide (ball) {
+    const ballBody = ball.body
     const direction = ((ballBody.transform.x - this.body.transform.x) / this.width) + this.originX
     if (direction < 0.3) {
       ballBody.velocity.x = -Math.abs(ballBody.velocity.x)

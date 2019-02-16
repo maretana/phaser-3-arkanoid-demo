@@ -25,4 +25,12 @@ export default class Brick extends Phaser.Physics.Arcade.Image {
     this.health = isBreakable ? 2 : 1
     this.setTint(color)
   }
+
+  onBallCollide (ball) {
+    if (--this.health) {
+      this.setTexture('spritesheet', 'brick_damaged')
+    } else {
+      this.destroy()
+    }
+  }
 }

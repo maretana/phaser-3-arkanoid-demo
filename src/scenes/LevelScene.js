@@ -77,7 +77,10 @@ export default class LevelScene extends Phaser.Scene {
       paddle.onBorderCollide(border.body)
     })
     this.physics.add.collider(this.paddle, this.ball, (paddle, ball) => {
-      paddle.onBallCollide(ball.body)
+      paddle.onBallCollide(ball)
+    })
+    this.physics.add.collider(this.ball, this.bricks, (ball, brick) => {
+      brick.onBallCollide(ball)
     })
   }
 
