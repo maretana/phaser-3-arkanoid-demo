@@ -22,7 +22,7 @@ export default class Paddle extends Phaser.Physics.Arcade.Image {
   }
 
   stop () {
-    this.setVelocityX(0)
+    this.body.stop()
   }
 
   onBorderCollide (borderBody) {
