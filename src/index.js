@@ -18,7 +18,7 @@ let game = new Phaser.Game({ // eslint-disable-line no-unused-vars
   physics: {
     default: 'arcade',
     arcade: {
-      debug: true,
+      debug: false,
       gravity: 0
     }
   }

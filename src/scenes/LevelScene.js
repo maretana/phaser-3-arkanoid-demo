@@ -2,11 +2,15 @@ import Phaser from 'phaser'
 import CONSTS from 'consts.json'
 import Paddle from 'components/Paddle'
 import Ball from 'components/Ball'
-// import Brick from 'components/Brick'
+import Brick from 'components/Brick'
 
 export default class LevelScene extends Phaser.Scene {
   constructor () {
     super({ key: CONSTS.SCENE.LEVEL })
+  }
+
+  preload () {
+    this.load.json('level', 'assets/levels/level_1.json')
   }
 
   init () {
@@ -41,8 +45,30 @@ export default class LevelScene extends Phaser.Scene {
   addPaddle () {
     const { width, height } = this.sys.game.config
     const x = width / 2
-    const y = height * 0.85
+    const y = height * 0.89
     this.paddle = new Paddle({ scene: this, x, y })
+  }
+
+  loadLevel () {
+    this.bricks = this.physics.add.staticGroup()
+    const level = this.cache.json.get('level')
+    let x = 25
+    let y = 25
+    level.bricks.forEach(row => {
+      row.forEach(brickData => {
+        let brick = new Brick({
+          scene: this,
+          x,
+          y,
+          color: CONSTS.COLOR[brickData.color],
+          isBreakable: brickData.isBreakable
+        })
+        x += brick.displayWidth
+        window.brick = brick
+      })
+      x = 25
+      y += 28 // approx height of a brick
+    })
   }
 
   addColliders () {
@@ -63,6 +89,7 @@ export default class LevelScene extends Phaser.Scene {
     this.addBorders()
     this.addBall()
     this.addPaddle()
+    this.loadLevel()
     this.addColliders()
     this.cursors = this.input.keyboard.createCursorKeys()
   }
