@@ -16,6 +16,10 @@ let game = new Phaser.Game({ // eslint-disable-line no-unused-vars
   },
   scene: [LoadScene, MenuScene, LevelScene],
   physics: {
-    default: 'arcade'
+    default: 'arcade',
+    arcade: {
+      debug: true,
+      gravity: 0
+    }
   }
 })
